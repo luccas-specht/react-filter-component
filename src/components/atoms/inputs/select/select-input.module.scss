@@ -1,7 +1,6 @@
 .select-input {
   position: relative;
   display: flex;
-  width: 315px;
   height: 45px;
   line-height: 3;
   overflow: hidden;
@@ -19,6 +18,7 @@
     padding-left: 10px;
     line-height: 16px;
     color: $primary-gray;
+    width: 100%;
     cursor: pointer;
   }
 }
@@ -28,6 +28,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
   padding: 0 1em;
   background: $primary-black;
   cursor: pointer;

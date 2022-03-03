@@ -16,6 +16,10 @@ export type Node = {
   shortDescription: string;
 };
 
-export type FilterData = {
-  nodes: Node[];
+export type Categories = Category[];
+
+export type Nodes = Node[];
+
+export type Products = {
+  nodes: Nodes;
 };

@@ -1,10 +1,16 @@
-export const WrapperProductCards = ({}) => {
+import { Categories, Nodes } from '~/models';
+
+type Props = {
+  products: Nodes;
+};
+
+export const WrapperProductCards = ({ products }: Props) => {
   const renderCards = () => {
     return (
       <div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        {products.map((_, index) => (
+          <div key={index}>{index}</div>
+        ))}
       </div>
     );
   };

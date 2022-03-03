@@ -1,1 +1,2 @@
-export * from './filter-component';
+export * from './shared';
+export * from './components';

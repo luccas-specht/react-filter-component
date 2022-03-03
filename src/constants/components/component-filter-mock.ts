@@ -1,4 +1,17 @@
-import { FilterData } from '~/models';
+export const DEFAULT_CATEGORIES = [
+  {
+    id: '-a412a678-3248-531d-a280-7259ace2c0e9',
+    name: 'Stick',
+  },
+  {
+    id: '-97da5e09-f0bc-5e40-8061-8a568757dfa4',
+    name: 'Roll On',
+  },
+  {
+    id: '-ea2b6a01-51da-5c1e-b8ee-2323231c93ae',
+    name: 'Aerosol',
+  },
+];
 
 export const MOCK_RESPONSE = {
   data: {

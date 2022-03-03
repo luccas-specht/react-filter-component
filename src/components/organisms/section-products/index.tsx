@@ -1,16 +1,13 @@
-import { FilterComponent } from '~/components';
 import { Categories, Nodes } from '~/models';
-import { WrapperProductCards } from '..';
+import { FilterComponent, WrapperProductCards } from '~/components';
 
 type Props = {
-  initialValue: string;
   products: Nodes;
   options: Categories;
   handleChangeCategory: (e: any) => void;
 };
 
 export const SectionProducts = ({
-  initialValue,
   options,
   products,
   handleChangeCategory,
@@ -23,7 +20,6 @@ export const SectionProducts = ({
       }}
       options={options}
       selectInput={{
-        initialValue: initialValue,
         onChange: handleChangeCategory,
       }}
     />

@@ -12,7 +12,6 @@ type OptionType = {
 };
 
 type SelectInputType = {
-  initialValue: string;
   onChange: (value: any) => void;
 };
 
@@ -33,11 +32,7 @@ export const FilterComponent = ({ label, options, selectInput }: Props) => {
 
   return (
     <div>
-      {/* <Label htmlFor={label.htmlFor} text={label.text} /> */}
-      <SelectInput
-        onChange={selectInput.onChange}
-        initialValue={selectInput.initialValue}
-      >
+      <SelectInput onChange={selectInput.onChange}>
         {renderOptions()}
       </SelectInput>
     </div>

@@ -5,11 +5,6 @@ type FilterProductFunctionParams = {
   categoryIdToFilter: string;
 };
 
-type GetCategoriesFunctionParams = {
-  categories: Categories;
-  categoryIdToFilter: string;
-};
-
 export const filterProductsByCategory = ({
   products,
   categoryIdToFilter,

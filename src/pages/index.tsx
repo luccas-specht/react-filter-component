@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
 import { HomeTemplate } from '~/components';
 import { filterProductsByCategory } from '~/utils';
@@ -9,35 +9,31 @@ const Home: NextPage = () => {
   const { nodes } = MOCK_RESPONSE.data;
 
   const MIN_PRODUCTS_COUNT = 1;
+  const INITIAL_CATEGORY_ID = DEFAULT_CATEGORIES[0].id;
 
   const [products, setProducts] = useState(nodes);
-  const [options, setOptions] = useState(DEFAULT_CATEGORIES);
-  const [categoryIdToFilter, setCategoryToFilter] = useState('');
+  const [categoryIdToFilter, setCategoryToFilter] =
+    useState(INITIAL_CATEGORY_ID);
 
-  const handleChangeCategory = (e: any) => {
+  const handleChangeCategory = (e: ChangeEvent<HTMLInputElement>) => {
     setCategoryToFilter(e.target.value);
   };
 
   useEffect(() => {
     const filteredProducts = filterProductsByCategory({
-      products,
+      products: nodes,
       categoryIdToFilter,
     });
+
     if (filteredProducts.length >= MIN_PRODUCTS_COUNT) {
       setProducts(filteredProducts);
     }
-
-    const filteredOptions = DEFAULT_CATEGORIES.filter(
-      (category) => category.id !== categoryIdToFilter
-    );
-    setOptions(filteredOptions);
   }, [categoryIdToFilter]);
 
   return (
     <HomeTemplate
-      products={nodes}
+      products={products}
       options={DEFAULT_CATEGORIES}
-      initialValue={categoryIdToFilter}
       handleChangeCategory={handleChangeCategory}
     />
   );

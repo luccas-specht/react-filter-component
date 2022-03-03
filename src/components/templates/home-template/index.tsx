@@ -8,17 +8,15 @@ type Props = {
 };
 
 export const HomeTemplate = ({
-  products,
   options,
+  products,
   handleChangeCategory,
-}: Props) => {
-  return (
-    <Container>
-      <SectionProducts
-        products={products}
-        options={options}
-        handleChangeCategory={handleChangeCategory}
-      />
-    </Container>
-  );
-};
+}: Props) => (
+  <Container>
+    <SectionProducts
+      options={options}
+      products={products}
+      handleChangeCategory={handleChangeCategory}
+    />
+  </Container>
+);

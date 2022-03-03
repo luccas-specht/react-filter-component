@@ -6,19 +6,19 @@
   line-height: 3;
   overflow: hidden;
   border-radius: 0.25em;
-  border: 2px solid #2d9cdb;
+  border: 2px solid $primary-blue;
 
   select {
     appearance: none;
     outline: 0;
     box-shadow: none;
     border: 0 !important;
-    border: 1px solid #2d9cdb;
+    border: 1px solid $primary-blue;
     flex: 1;
     font-size: 18px;
     padding-left: 10px;
     line-height: 16px;
-    color: #4f4f4f;
+    color: $primary-gray;
     cursor: pointer;
   }
 }
@@ -29,9 +29,9 @@
   top: 0;
   right: 0;
   padding: 0 1em;
-  background: #2b2e2e;
+  background: $primary-black;
   cursor: pointer;
   pointer-events: none;
   transition: 0.25s all ease;
-  color: #2d9cdb;
+  color: $primary-blue;
 }

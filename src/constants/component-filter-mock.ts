@@ -1,5 +1,3 @@
-import { FilterData } from '~/models';
-
 export const MOCK_RESPONSE = {
   data: {
     nodes: [

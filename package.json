@@ -1,5 +1,6 @@
 {
   "name": "react-filter",
+  "description": "An open source project to improve my skills in React with a filter component",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +10,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "babel-plugin-root-import": "^6.6.0",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
+    "sass-resources-loader": "^2.1.1",
     "typescript": "4.6.2"
   }
 }

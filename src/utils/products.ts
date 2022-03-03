@@ -1,16 +1,12 @@
-import { Categories, Nodes, SetTypeFunction } from '~/models';
+import { Nodes } from '~/models';
 
-type FilterProductFunctionParams = {
+type FilterProductsFunctionParams = {
   products: Nodes;
-  categoryIdToFilter: string;
+  categoryId: string;
 };
 
-export const filterProductsByCategory = ({
+export const filterProductsByCategoryId = ({
   products,
-  categoryIdToFilter,
-}: FilterProductFunctionParams) => {
-  const filteredProducts = products.filter(
-    ({ category }) => category.id === categoryIdToFilter
-  );
-  return filteredProducts;
-};
+  categoryId,
+}: FilterProductsFunctionParams) =>
+  products.filter(({ category }) => category.id === categoryId);

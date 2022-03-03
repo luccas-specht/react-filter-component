@@ -1,9 +1,23 @@
-import { Node } from '~/models';
+import { Image } from '~/models';
+import { ProductDetails } from '~/components';
+
+import styles from './product-card.module.scss';
 
 type Props = {
-  product: Node;
+  name: string;
+  images: Image[];
 };
 
-export const ProductCard = ({ product }: Props) => {
-  return <div>um card</div>;
+export const ProductCard = ({ name, images }: Props) => {
+  const renderImages = () =>
+    images.map(({ src, alt }, index) => (
+      <img src={src} alt={alt} key={index} />
+    ));
+
+  return (
+    <main className={styles['product-card']}>
+      <div className={styles['product-card__images']}>{renderImages()}</div>
+      <ProductDetails productName={name} />
+    </main>
+  );
 };

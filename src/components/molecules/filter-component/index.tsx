@@ -1,10 +1,8 @@
 import { useCallback } from 'react';
-import { Label, Option, SelectInput } from '~/components/atoms';
 
-type LabelType = {
-  text: string;
-  htmlFor: string;
-};
+import { Label, Option, SelectInput } from '~/components';
+
+import styles from './filter-component.module.scss';
 
 type OptionType = {
   id: string;
@@ -16,12 +14,11 @@ type SelectInputType = {
 };
 
 type Props = {
-  label: LabelType;
   options: OptionType[];
   selectInput: SelectInputType;
 };
 
-export const FilterComponent = ({ label, options, selectInput }: Props) => {
+export const FilterComponent = ({ options, selectInput }: Props) => {
   const renderOptions = useCallback(
     () =>
       options.map(({ id, name }, index) => (
@@ -31,7 +28,8 @@ export const FilterComponent = ({ label, options, selectInput }: Props) => {
   );
 
   return (
-    <div>
+    <div className={styles['filter-component']}>
+      <Label htmlFor="select-input" text="Categories:" />
       <SelectInput onChange={selectInput.onChange}>
         {renderOptions()}
       </SelectInput>

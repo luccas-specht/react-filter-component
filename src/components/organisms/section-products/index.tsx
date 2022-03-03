@@ -1,6 +1,8 @@
 import { Categories, Nodes } from '~/models';
 import { FilterComponent, WrapperProductCards } from '~/components';
 
+import styles from './section-products.module.scss';
+
 type Props = {
   products: Nodes;
   options: Categories;
@@ -12,17 +14,13 @@ export const SectionProducts = ({
   products,
   handleChangeCategory,
 }: Props) => (
-  <section>
+  <div className={styles['section-products']}>
     <FilterComponent
-      label={{
-        text: 'Categories',
-        htmlFor: 'categories',
-      }}
       options={options}
       selectInput={{
         onChange: handleChangeCategory,
       }}
     />
     <WrapperProductCards products={products} />
-  </section>
+  </div>
 );

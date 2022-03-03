@@ -4,7 +4,9 @@
   position: relative;
   margin: auto;
   padding-top: 70px;
-  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   /* Small smartphone */
   @media (min-width: 280px) and (max-width: 360px) {

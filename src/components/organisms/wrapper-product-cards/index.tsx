@@ -8,9 +8,9 @@ type Props = {
 };
 
 export const WrapperProductCards = ({ products }: Props) => (
-  <div className={styles['wrapper-product-cards']}>
-    {products.map((product) => (
-      <ProductCard key={product.id} product={product} />
+  <section className={styles['wrapper-product-cards']}>
+    {products.map(({ id, name, images }) => (
+      <ProductCard key={id} name={name} images={images} />
     ))}
-  </div>
+  </section>
 );

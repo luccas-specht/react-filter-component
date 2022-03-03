@@ -1,1 +1,1 @@
-export { MOCK_RESPONSE } from './component-filter-mock';
+export * from './components';

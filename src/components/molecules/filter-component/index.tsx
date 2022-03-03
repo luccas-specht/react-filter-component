@@ -26,14 +26,14 @@ export const FilterComponent = ({ label, options, selectInput }: Props) => {
   const renderOptions = useCallback(
     () =>
       options.map(({ id, name }, index) => (
-        <Option key={index} id={id} name={name} />
+        <Option key={index} value={id} name={name} />
       )),
     [options]
   );
 
   return (
     <div>
-      <Label htmlFor={label.htmlFor} text={label.text} />
+      {/* <Label htmlFor={label.htmlFor} text={label.text} /> */}
       <SelectInput
         onChange={selectInput.onChange}
         initialValue={selectInput.initialValue}

@@ -7,7 +7,5 @@ type Props = {
 };
 
 export const SelectInput = ({ children, initialValue, onChange }: Props) => (
-  <select onChange={onChange} value={initialValue}>
-    {children}
-  </select>
+  <select onChange={onChange}>{children}</select>
 );

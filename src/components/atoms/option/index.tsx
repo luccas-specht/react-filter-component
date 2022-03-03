@@ -1,8 +1,8 @@
 type Props = {
-  id: string;
   name: string;
+  value: string;
 };
 
-export const Option = ({ id, name }: Props) => (
-  <option value={id}>{name}</option>
+export const Option = ({ value, name }: Props) => (
+  <option value={value}>{name}</option>
 );

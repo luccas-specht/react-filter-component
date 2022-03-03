@@ -3,7 +3,6 @@ import { Categories, Nodes, SetTypeFunction } from '~/models';
 type FilterProductFunctionParams = {
   products: Nodes;
   categoryIdToFilter: string;
-  setProducts: SetTypeFunction<Nodes>;
 };
 
 type GetCategoriesFunctionParams = {
@@ -14,16 +13,9 @@ type GetCategoriesFunctionParams = {
 export const filterProductsByCategory = ({
   products,
   categoryIdToFilter,
-  setProducts,
 }: FilterProductFunctionParams) => {
   const filteredProducts = products.filter(
     ({ category }) => category.id === categoryIdToFilter
   );
-  setProducts(filteredProducts);
+  return filteredProducts;
 };
-
-export const getAllCategoriesDifferentOfTheCategoryIdToFilter = ({
-  categories,
-  categoryIdToFilter,
-}: GetCategoriesFunctionParams) =>
-  categories.filter(({ id }) => id !== categoryIdToFilter);

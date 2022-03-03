@@ -1,18 +1,27 @@
 import { Categories, Nodes } from '~/models';
-import { Container, WrapperProductCards } from '~/components';
+import { Container, WrapperProductCards, SectionProducts } from '~/components';
 
 type Props = {
+  initialValue: string;
   products: Nodes;
   options: Categories;
   handleChangeCategory: (e: any) => void;
 };
 
 export const HomeTemplate = ({
+  initialValue,
   products,
   options,
   handleChangeCategory,
-}: Props) => (
-  <Container>
-    <WrapperProductCards products={products} />
-  </Container>
-);
+}: Props) => {
+  return (
+    <Container>
+      <SectionProducts
+        initialValue={initialValue}
+        products={products}
+        options={options}
+        handleChangeCategory={handleChangeCategory}
+      />
+    </Container>
+  );
+};

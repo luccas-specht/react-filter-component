@@ -15,9 +15,9 @@ export const ProductCard = ({ name, images }: Props) => {
     ));
 
   return (
-    <div className={styles['product-card']}>
+    <main className={styles['product-card']}>
       <div className={styles['product-card__images']}>{renderImages()}</div>
       <ProductDetails productName={name} />
-    </div>
+    </main>
   );
 };

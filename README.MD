@@ -1,6 +1,10 @@
 
 # React Filter Component
 
+![image](https://user-images.githubusercontent.com/40741571/156684093-bc2d39b7-ef98-4559-8b25-5e8663bc9350.png)
+![Preview-Screens](https://github.com/luccas-specht/react-filter-component/blob/main/images/mobile.png)
+
+
 ## About this project
 
 The idea of the website is:
@@ -87,7 +91,7 @@ $ npm build && npm start
 - [TypeScript](https://www.typescriptlang.org) - JavaScript with syntax for types
 
 
-## More Infomrations
+## More Informations
 
 Please, for more informations, feel free to contact me.
 

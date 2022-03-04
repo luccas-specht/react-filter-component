@@ -91,7 +91,7 @@ $ npm build && npm start
 - [TypeScript](https://www.typescriptlang.org) - JavaScript with syntax for types
 
 
-## More Infomrations
+## More Informations
 
 Please, for more informations, feel free to contact me.
 
